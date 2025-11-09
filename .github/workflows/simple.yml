@@ -29,8 +29,12 @@ jobs:
       - name: Run a one-line script
         run: echo Hello, world!
 
-      - name: List the etc directory
-        run: ls /etc/
+      - name: "See what I'm running"
+        run: |
+          uname -a
+          cat /etc/lsb-release
+          cat /etc/debian_version
+          cat /etc/ec2_version
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
